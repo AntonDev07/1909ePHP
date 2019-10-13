@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #container {
+            border: 1px solid orange;
+        }
+        #boxa {
+            background: green;
+            height: 200px;
+            width: 200px;
+            float: right;
+        }
+        /**
+         * ::after thêm 1 phần content nội dung vào sau thẻ html
+         có class .clearfix
+         */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+<pre>
+
+
+</pre>
+
+<div id="container" class="clearfix">
+    <div id="boxa">
+        BOX A
+    </div>
+</div>
+
+</body>
+</html></html>

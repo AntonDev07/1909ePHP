@@ -1,0 +1,38 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.site-wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+header .header-inner{
+    background: gray;
+    font-size: 32px;
+    text-align: center;
+    padding: 30px 0;
+}
+header .main-navigation .main-menu{
+  list-style: none;
+    background: yellow;
+    padding: 0;
+    margin: 0;
+}
+.main-navigation .main-menu li{
+    background: orange;
+    float: left;
+
+}
+.main-navigation .main-menu li a{
+    display: block;
+    background: orange;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.main-navigation .main-menu li a:hover{
+    background: tomato;
+
+}

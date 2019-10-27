@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    /**
+    chữ row con trực tiếp wrap có màu đỏ
+    chữ row cháu , chắt có màu xanh
+    */
+    .wrap .row {
+    color: green;
+    }
+    .wrap > .row {
+    color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="row">ROW con 1</div>
+    <div class="row">ROW con 2</div>
+    <div class="row">ROW con 3</div>
+    <div class="row">
+        <div class="row">ROW cháu 1</div>
+        <div class="row">ROW cháu 2</div>
+        <div class="row">ROW cháu 3</div>
+        <div class="row">
+            <div class="row">ROW chắt 1</div>
+            <div class="row">ROW chắt 2</div>
+            <div class="row">ROW chắt 3</div>
+        </div>
+    </div>
+</div>
+
+<pre>
+    select1 select2 => selector 1 chứa selector2
+    select1 > select2 => selector 2 phải là con trực tiếp của selector 1
+    chú ý : khi nhiều selector cùng thỏa mãn thì selector nào chạy sau
+    sẽ đè làm mất tác dụng của selector chạy trước nó
+</pre>
+</body>
+</html>

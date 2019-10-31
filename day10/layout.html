@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+</head>
+<style>
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body
+    {
+        background: gray;
+    }
+    .page-wrapper
+    {
+
+        width: 1200px;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    header
+    {
+        background: #faf4ae;
+        margin: 20px;
+        height: 300px;
+        position: relative;
+    }
+    header p {
+        text-align: center;
+        /*padding-bottom: 180px;*/
+
+    }
+    header h1
+    {
+        text-align: center;
+        font-size: 30px;
+
+        padding: 20px 0;
+    }
+    .nav-list
+    {
+        background: black;
+        position: absolute;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        bottom: 0px;
+    }
+    .nav-item
+    {
+        float: left;
+        list-style-type: none;
+    }
+    .nav-link
+    {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding:20px 10px;
+    }
+    .nav-link:hover
+    {
+        background: lightgray;
+        color: black;
+    }
+    .main
+    {
+        background: #fff9d8;
+    }
+    .content
+    {
+        width: 70%;
+        float: left;
+        margin-right: 20px;
+    }
+    aside
+    {
+        width: 28%;
+       float: right;
+        margin-bottom: 100px;
+    }
+
+    .fakeimg{
+        background-color: rgba(78, 202, 255, 0.93);
+    }
+    footer{
+        background: #7d8061;
+    }
+
+</style>
+<body>
+<div class="page-wrapper">
+    <header>
+        <h1>My Website</h1>
+        <p>Resize the browser window to see the effect.</p>
+        <nav class="nav-layout">
+            <ul class="nav-list clearfix">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="float: right">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="content clearfix">
+            <h1>TITLE HEADING</h1>
+            <p>Title description, Dec 7, 2017</p>
+            <div class="fakeimg" style="height: 200px;">Image</div>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+            <h1>TITLE HEADING</h1>
+            <p>Title description, Dec 7, 2017</p>
+            <div class="fakeimg" style="height: 200px;">Image</div>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>  <!--end content-->
+
+        <aside class="clearfix">
+            <h1>About Me</h1>
+            <div class="fakeimg" style="height: 200px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </aside>
+        <aside class="clearfix">
+            <h1>About Me</h1>
+            <div class="fakeimg" style="height: 200px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </aside>
+    </div> <!-- het main-->
+
+
+  </div> <!-- het page-wrapper-->
+  <footer>
+
+  </footer>
+
+</body>
+</html>

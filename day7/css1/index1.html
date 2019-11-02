@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #target {
+            width: 350px;
+            background-color: orange;
+            color: white;
+            padding: 20px;
+            position: relative;
+            left: 50%;
+            top: 0;
+            margin-right: 175px;
+            transform: translate(-50%, 0);
+        }
+    </style>
+</head>
+<body>
+<div id="target">
+    Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+</div>
+
+<pre>
+    căn giữa sử dụng position: absolute;
+    thứ 1 : sử dụng left:50%
+    thứ 2 : transform: translate(-50%, 0);
+    dòng này có nghĩa đẩy cái khối html lùi lại theo chiều ngang 50% kích cỡ của
+    khối thẻ html đó
+    nếu muốn đẩy khối html lùi lại 1 nửa kích cỡ theo chiều dọc
+    => transform: translate(0, -50%);
+    Công thức transform: translate(X, Y);
+    X là chiều ngang
+    Y là chiều dọc
+</pre>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    header, footer{
+        padding: 50px;
+        text-align: center;
+        background: greenyellow;
+    }
+    aside{
+        width: 20%;
+        box-sizing: border-box;
+        background: orange;
+        padding: 30px;
+        min-height: 400px;
+        float: left;
+    }
+    .main-content{
+        width: 80%;
+        background: burlywood;
+        padding:50px ;
+        min-height: 400px;
+        float: right;
+        box-sizing: border-box;
+    }
+    main{
+        overflow: auto;
+    }
+    @media screen and (max-width: 680px) {
+        aside{
+            width: 100%;
+            float: none;
+        }
+        .main-content{
+            width: 100%;
+            float: none;
+        }
+    }
+</style>
+<body>
+<header>
+    <h1>Header</h1>
+</header>
+<main>
+    <section class="main-content">
+        <h1> nội dung chính của trang web</h1>
+    </section>
+    <aside>
+        <h1> aside3</h1>
+        <nav>
+            <ul>
+                <li><a href="#"> Trang chủ</a></li>
+                <li><a href="#"> Giới thiệu</a></li>
+                <li><a href="#"> Sản phẩm</a></li>
+                <li><a href="#"> Liên hệ</a></li>
+                <li><a href="#"> Tin tức</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+</main>
+<footer>
+    <h1> Footer</h1>
+</footer>
+</body>
+</html>

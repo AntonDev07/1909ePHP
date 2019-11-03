@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+   <pre>
+	 object là gì ?
+	   Cách khai báo và sử dụng ?
+   </pre>
+   <button onclick="document.getElementById('demo').innerHTML=Date()">This time is</button>
+  <p id="demo"></p>
+
+  <button onclick="showInfo('đỏ')">Màu đỏ</button>
+  <button onclick="showInfo('xanh')">Màu xanh</button>
+  <button onclick="showInfo('vàng')">Màu vàng</button>
+
+ <h1 id="result"></h1>
+</body>
+		<script type="text/javascript">
+          function showInfo(color) {
+			  if (color === 'đỏ'){
+			      document.getElementById('result').innerText = " Bạn chọn màu đỏ";
+			      document.getElementById('result').style.color = "red";
+			  }
+			  else if (color === 'xanh'){
+			      document.getElementById('result').innerText = " Bạn chọn màu xanh";
+			      document.getElementById('result').style.color = "green";
+			  }
+			  else if (color === 'vàng'){
+			      document.getElementById('result').innerText = " Bạn chọn màu vàng";
+			      document.getElementById('result').style.color = "yellow";
+			  }
+
+
+          }
+
+		</script>
+</html>

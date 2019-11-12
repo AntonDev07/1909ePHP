@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<pre>
+        Clearinterval phá vỡ cái sự lặp lại của setInterval
+    </pre>
+
+<div id="demo"></div>
+
+<button onclick="clearInterval(x)">Ngừng</button>
+
+<script type="text/javascript">
+    var x = setInterval(function() {
+        var d = new Date();
+        var current = document.getElementById("demo").innerText;
+        document.getElementById("demo").innerText = current + "\n" + d;
+    }, 2000);
+</script>
+
+</body>
+</html>

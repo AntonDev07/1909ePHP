@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<pre>
+	JS Date
+</pre>
+<div id="demo"></div>
+
+<div id="tet"></div>
+
+<div id="getTimeCurrent"></div>
+<div id="getTimeTet"></div>
+
+<div id="getCurrentYear"></div>
+<script type="text/javascript">
+    // Lấy ra thời gian hiện tại trong js
+	var d = new Date();
+	document.getElementById("demo").innerText = d;
+	//Set date theo 1 thời gian cụ thể
+	var tet = new Date(2020,0,1,0,0,0,0);
+	document.getElementById("tet").innerText = tet;
+
+    // lấy ra thời gian theo đơn vị mili giây
+    document.getElementById("getTimeCurrent").innerText = "Time hiện tại " + d.getTime();
+    document.getElementById("getTimeTet").innerText = "time tết 2020 " + tet.getTime();
+    document.getElementById("getCurrentYear").innerText = d.getFullYear() + " tháng " + d.getMonth() + " ngày " + d.getDate() + " giờ " + d.getHours() ;
+</script>
+</body>
+</html>
+
+</script>
+
+
+</body>
+</html>

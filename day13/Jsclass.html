@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS class</title>
+</head>
+<body>
+<pre>
+        Yêu cầu : tạo 1 class có tên là SinhVien
+        với các thuộc tính : tên , tuổi , quê quán , điểm tổng kết , xếp loại
+        Sau đó khởi tạo đối tượng từ class SinhVien này
+        và console.log() ra đối tượng đó
+
+    </pre>
+  <div id="info"></div>
+  <div id="info2"></div>
+<script type="text/javascript">
+	 class Sinhvien{
+
+	     constructor(ten, tuoi, quequan, diemtoan, diemly, diemhoa){
+			 this.ten = ten;
+			 this.tuoi = tuoi;
+			 this.quequan = quequan;
+			 this.diemtoan = diemtoan;
+			 this.diemly = diemly;
+			 this.diemhoa = diemhoa;
+		 }
+		 // khai bao thuoc tinh cho class
+		 thongtin(){
+	         return "Tôi tên là: " + this.ten + "" + "Tuổi: " + this.tuoi + "" +
+				 "" + "Quê quán" + this.quequan;
+		 }
+		 tinhdiem() {
+	         this.diemtongket = (this.diemtoan + this.diemly + this.diemhoa)/3;
+
+		 }
+		 xeploai() {
+	         if(this.diemtongket > 5){
+	             this.xeploai = "Qua môn";
+			 }
+			 else
+			 {
+			     this.xeploai = "Học lại";
+			 }
+		 }
+
+	 }
+
+	 var sinhvien1 = new Sinhvien("Tong Quang Anh",20, "Bắc Ninh", 3,2,9);
+	 document.getElementById('info').innerText = sinhvien1.thongtin();
+	 sinhvien1.tinhdiem();
+	 sinhvien1.xeploai();
+	 document.getElementById('info2').innerText = "Xếp loại: " + sinhvien1.xeploai;
+</script>
+</body>
+</html>

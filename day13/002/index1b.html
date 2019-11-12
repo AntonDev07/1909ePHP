@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<pre>
+        setInterval thực hiện 1 hàm lặp đi lặp lại
+        theo 1 thời gian chỉ định trước
+
+        Ví dụ : cứ 2s thì mình sẽ xuất ra màn hình 1 thời gian hiện tại
+    </pre>
+
+<div id="demo"></div>
+
+<script type="text/javascript">
+    var x = setInterval(function() {
+        var d = new Date();
+        var current = document.getElementById("demo").innerText;
+        document.getElementById("demo").innerText = current + "\n" + d;
+    }, 2000);
+</script>
+
+
+</body>
+</html>

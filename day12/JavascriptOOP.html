@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript</title>
+</head>
+<body>
+<pre>
+        Class là lớp
+        Object là đối tượng ( thể hiện cụ thể của lớp )
+        Ví dụ
+        Class là sinh viên
+        Đối tượng của class sinh viên là bạn sinh viên tên an
+        Class ô tô
+        Đối tượng class là vinfast
+    </pre>
+<script type="text/javascript">
+    function User() {
+        this.username = "";
+        this.password = "";
+
+        this.setInfo = function (username, password) {
+            this.username = username;
+            this.password = password;
+        };
+        this.checkLogIn = function() {
+            if (this.username == "admin" && this.password == "123456"){
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
+
+    }
+    var user1 = new User();
+    user1.setInfo("admin", "123");
+    if (user1.checkLogIn()){
+        alert("Đăng nhập thành công");
+    }
+    else{
+        alert("Đăng nhập thất bại");
+    }
+</script>
+</body>
+
+</html>

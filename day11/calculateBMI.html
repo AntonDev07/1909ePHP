@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tính toán BMI</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+
+            <pre>
+                Sử dụng công thức tại trang https://news.zing.vn/5-cong-thuc-don-gian-do-chi-so-bmi-post669580.html
+                để tính toán ra chỉ số BMI khi nhập vào
+                và in ra thông tin phân loại
+                và nguy cơ bệnh tật
+            </pre>
+		<form name="bmi" action="" method="post" onsubmit="return false;">
+			<div class="form-group">
+				<label>Cân nặng ( Kg )</label>
+				<input type="text" id="weight" class="form-control" placeholder="Cân nặng">
+
+			</div>
+			<div class="form-group">
+				<label>Chiều cao ( đơn vị mét )</label>
+				<input type="text" id="height" class="form-control" placeholder="Chiều cao">
+			</div>
+
+			<button class="btn btn-primary" onclick="Calculate()">tính MBI</button>
+		</form>
+	</div>
+
+	<div class="row">
+		<h2>Kết quả sau tính toán</h2>
+
+
+	</div>
+
+	<div class="row">
+		<p id="bmi">BMI : ?</p>
+		<p id="type">Phân loại : ?</p>
+		<p id="potential">Nguy cơ bênh tật : ?</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+    function Calculate() {
+        var cannang = document.getElementById('weight').value;
+        var chieucao = document.getElementById('height').value;
+        var tinhtoan = (cannang / (chieucao*chieucao)).toFixed(2);
+
+        if (tinhtoan < 18.5 ){
+            document.getElementById('bmi').innerHTML = tinhtoan;
+            document.getElementById('type').innerHTML = '\nGầy';
+            document.getElementById('potential').innerHTML = '\nThấp';
+
+		}
+		else if (tinhtoan > 18.5 && tinhtoan <24.9 ){
+            document.getElementById('bmi').innerHTML = tinhtoan;
+            document.getElementById('type').innerHTML = ' Bình thường';
+            document.getElementById('potential').innerHTML = ' Trung bình ';
+
+        }
+        else if (tinhtoan > 25.0 && tinhtoan <29.9 ){
+            document.getElementById('bmi').innerHTML = tinhtoan;
+            document.getElementById('type').innerHTML = 'Hơi béo';
+            document.getElementById('potential').innerHTML = 'Cao';
+
+        }
+        else if (tinhtoan > 30.0 && tinhtoan <34.9 ){
+            document.getElementById('bmi').innerHTML = tinhtoan;
+            document.getElementById('type').innerText = 'Béo phì cấp độ 1';
+            document.getElementById('potential').innerText = 'Rất cao';
+
+        }
+        else if (tinhtoan > 35.0 && tinhtoan <39.9 ){
+            document.getElementById('bmi').innerHTML = tinhtoan;
+            document.getElementById('type').innerText = 'Béo phì cấp độ 1';
+            document.getElementById('potential').innerText = 'Nguy hiểm';
+
+        }
+
+
+    }
+</script>
+</body>
+</html>

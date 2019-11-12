@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+
+	<div class="row">
+        <pre>
+                Đăng nhập lấy dữ liệu 2 ô input của form nếu login thành công
+                thì sẽ chuyển hướng trang đến https://www.w3schools.com
+                Nếu thất bại in ra câu thông báo thất bại trong thẻ div #message
+
+            </pre>
+	</div>
+	<div class="row">
+
+
+		<form name="login" action="" method="post" onsubmit="loginForm(); return false;">
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" id="name" name="username" class="form-control" >
+
+			</div>
+			<div class="form-group">
+				<label>Mật khẩu</label>
+				<input type="password" id="pass" name="password" class="form-control">
+			</div>
+
+			<div id="message" class="form-group"></div>
+
+
+			<input type="submit" name="submit" id="sub" class="btn btn-primary" value="Đăng nhập">
+
+		</form>
+	</div>
+
+
+</div>
+
+<script type="text/javascript">
+    function User(username, password) {
+        // khai báo các thuộc tính
+        this.username = username;
+        this.password = password;
+        this.checkLogin = function() {
+            if (this.username == "admin" && this.password == "12345678") {
+                return true;
+            }
+            return false;
+        };
+    }
+    function loginForm() {
+		var ten = document.getElementById('name').value;
+		var matkhau = document.getElementById('pass').value;
+
+
+        var user2 = new User(ten,matkhau);
+
+        // viet chuc nang đang nhập
+	   if (user2.checkLogin()){
+	       alert("Đăng nhập thành công");
+	       window.location = 'https://www.w3schools.com';
+	   }
+	   else
+	       document.getElementById('message').innerHTML ="Đăng nhập thất bại";
+    }
+
+
+</script>
+</body>
+</html>

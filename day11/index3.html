@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài tập</title>
+</head>
+<style>
+	img{
+		width: 300px;
+	}
+</style>
+<body>
+<pre>
+        Bài tập tạo ra 3 nút nhấn
+        Sau khi click vào nút này hình ảnh bên dưới sẽ thay đổi theo
+        Gợi ý sử dụng thuộc tính onclick của thẻ button và thay
+        thế thuộc tính src của thẻ img bằng js
+    </pre>
+
+<img src="cat.jpg" id="result" alt="">
+<button onclick="showÌmage('chó')">Chó</button>
+<button onclick="showÌmage('mèo')">Mèo</button>
+<button onclick="showÌmage('thỏ')">Thỏ</button>
+
+
+<script type="text/javascript">
+	 function showÌmage(animal) {
+		 if (animal === 'chó'){
+		     document.getElementById('result').src = "dog.jpg"
+		 }
+		 else if(animal === 'mèo'){
+		     document.getElementById('result').src = "cat.jpg"
+		 }
+		 else if(animal === 'thỏ'){
+		     document.getElementById('result').src = "rabbit.jpg"
+		 }
+     }
+</script>
+</body>
+</html>

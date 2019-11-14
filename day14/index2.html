@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<pre>
+        jquery fw là js framework
+        việc sử dụng cú pháp của jquery cho phép code js nhanh và dễ dàng hơn
+        js thuần
+        https://code.jquery.com/ để load jquery CDN
+
+        => jquery selector
+        #demo ( css )
+        $("#demo") hoặc $('#demo') => jquery selector
+
+    </pre>
+<h1 id="demo1">Demo h1</h1>
+<a href="#" id="btn">Click here</a>
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+      $('#btn').on('click', function (e) {
+		  // ngăn sự chuyển hướng của thẻ a
+		  e.preventDefault();
+		  $('#demo1').css('color','red');
+      });
+    });
+</script>
+</body>
+</html>

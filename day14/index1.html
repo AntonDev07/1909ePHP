@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<pre>
+        jquery fw là js framework
+        việc sử dụng cú pháp của jquery cho phép code js nhanh và dễ dàng hơn
+        js thuần
+        https://code.jquery.com/ để load jquery CDN
+
+        => jquery selector
+        #demo ( css )
+        $("#demo") hoặc $('#demo') => jquery selector
+
+    </pre>
+
+<div id="demo">Demo</div>
+<div id="demo1">Demo1</div>
+
+<div class="hanoi">thanh xuân</div>
+<div class="hanoi">hoàng mai</div>
+<div class="hanoi">hoàn kiếm</div>
+
+<div class="haiphong">lê chân</div>
+<div class="haiphong">thủy nguyên</div>
+<div class="haiphong">an lão</div>
+
+<h1>Demo thẻ h1</h1>
+<h3>Demo thẻ h3</h3>
+<h3>Demo thẻ h4</h3>
+
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        /**
+         * tất cả các lệnh jquery sẽ viết document ready
+         * tại sao phải viết trong document ready
+         * hiểu đơn giản là khi trang đã được load xong mô hình dom
+         * thì code trong đây sẽ được chạy
+         */
+        /**
+         * selector của jquery cho id
+         */
+        $("#demo").css("color", "red");
+        // viết câu lệnh js thuần chọn #demo1 có màu xanh
+		document.getElementById("demo1").style.color = 'green';
+        $(".hanoi").css("background", "yellow");
+        // viết câu lệnh js thuần chọn .haiphong có màu nền xanh
+        var y =document.getElementsByClassName("haiphong")
+		for (var i = 0; i < y.length;i++){
+            y[i].style.backgroundColor = 'green';
+		}
+        $("h1").css("color", "violet");
+        // viết câu lệnh js thuần chọn h3 có màu chữ tím
+		var hn = document.getElementsByTagName('h3')
+		for (var i = 0; i <hn.length;i++){
+		    hn[i].style.color = 'violet';
+		}
+    });
+</script>
+</body>
+</html>

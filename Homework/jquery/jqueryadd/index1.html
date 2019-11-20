@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<h1>Add thêm nội dung vào html </h1>
+<div class="container" style="margin: 20px; padding: 20px; background-color: orange;">
+	Nội dung bên trong thẻ container
+</div>
+<div style="margin-top: 30px; padding: 10px;">
+	<button type="button" id="btn-append">Append</button>
+	<button type="button" id="btn-prepend">Prepend</button>
+	<button type="button" id="btn-after">After</button>
+	<button type="button" id="btn-before">Before</button>
+</div>
+
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#btn-append").on("click", function () {
+		$(".container").append("<p style='color: red'>Nội dung thêm vào trong phía cuối selector được chọn</p>");
+    });
+    $("#btn-prepend").on("click", function () {
+        $(".container").prepend("<p style='color: red'>Nội dung thêm vào trong ở phía đầu selector được chon </p>");
+    });
+    $("#btn-after").on("click", function () {
+        $(".container").after("<p style='color: red'>Nội dung thêm vào ngoài ở phía sau selector được chon </p>");
+    });
+    $("#btn-before").on("click", function () {
+        $(".container").before("<p style='color: red'>Nội dung thêm ngoài vào ở phía trước selector được chon </p>");
+    });
+  })
+ 
+</script>
+</body>
+</html>

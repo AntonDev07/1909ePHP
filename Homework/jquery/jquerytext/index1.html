@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+<div class="containerA" style="padding: 20px; background: green; color: orange">
+	Xe Đạp | Thùy Chi ft. M4u - Cover by CHARLES
+	------------------
+	Follow Charles:
+	MP3 SC: https://soundcloud.com/charles-acoust...
+	Soundcloud: https://soundcloud.com/charles-acoustic
+	Fanpage: www.facebook.com/charleshuynh.official/
+	Facebook: www.facebook.com/huynh.charles.14
+
+</div>
+<button id="control" style="margin: 30px">CHuyển text</button>
+
+<div class="containerB" style="padding: 20px; background: green; color: orange">
+</div>
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+	  $("#control").on("click", function () {
+		  var a = $(".containerA").text();
+		  $(".containerB").text("test");
+      })
+  })
+ 
+</script>
+</body>
+</html>

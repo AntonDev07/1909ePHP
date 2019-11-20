@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<h1>Sự kiện submit của form </h1>
+		<div class="col-sm-12">
+			<form action="" name="register" method="post">
+				<div class="form-group">
+					<label for="email">Email address</label>
+					<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div>
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input type="text" name="username" class="form-control" id="username" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" name="password" class="form-control" id="password" placeholder="Password">
+				</div>
+
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+  		$("form[name='register']").submit(function () {
+			var email = $("input[name='email']").val();
+			var username = $("input[name='username']").val();
+			var password = $("input[name='password']").val();
+			
+			if ((email == '') ||(username = '') || (password = '') ){
+			    alert("Bạn phải đăng nhập đầy đủ dữ liệu");
+
+			    return false;
+			}
+        });
+    })
+</script>
+</body>
+</html>

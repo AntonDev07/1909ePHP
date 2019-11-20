@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+<div class="container">
+
+		<h1>Sự kiện resize </h1>
+		<p id="one" style="color:red; margin-top: 20px;">Hello</p>
+
+</div>
+
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+       var w = $(window).width();
+       var h = $(window).height();
+
+       $("#one").html("Độ rộng của màn hình " + w +"\tĐộ cao của màn hình: " + h);
+       $(window).resize(function () {
+           var w = $(window).width();
+           var h = $(window).height();
+
+           $("#one").html("Độ rộng của màn hình " + w +"\tĐộ cao của màn hình: " + h);
+       });
+    })
+</script>
+</body>
+</html>

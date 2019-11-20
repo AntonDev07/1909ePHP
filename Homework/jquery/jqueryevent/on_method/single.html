@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+		.container{
+			margin-top: 20px;
+			margin-bottom: 20px;
+			background: orange;
+			padding: 30px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	I enjoy this station alot. i work for a cool collections departme
+	nt that lets us listen to YouTube, other music and TV while we work
+	. its very relaxing especially the kind of work I do.
+</div>
+<div class="container">
+	I enjoy this station alot. i work for a cool collections departme
+	nt that lets us listen to YouTube, other music and TV while we work
+	. its very relaxing especially the kind of work I do.
+</div>
+<div class="container">
+	I enjoy this station alot. i work for a cool collections departme
+	nt that lets us listen to YouTube, other music and TV while we work
+	. its very relaxing especially the kind of work I do.
+</div>
+<div>
+	<button id="control">Đổi màu</button>
+
+</div>
+
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // viet lại bằng on
+		$("#control").on("click", function () {
+ 			$(".container").css("background","red");
+ 			$(".container").css("color","orange");
+        })
+    })
+</script>
+</body>
+</html>

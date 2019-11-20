@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<button id="control">Toggle method</button>
+
+<div class="container" style="padding: 20px; background: green; color: orange;">
+ Hello các bạn
+</div>
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+		$("#control").on("click", function () {
+			$(".container").toggle(1000, function () {
+				alert("Đã thay đổi");
+            });
+        })
+    })
+</script>
+</body>
+</html>

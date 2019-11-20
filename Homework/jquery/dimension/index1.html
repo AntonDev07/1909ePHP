@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+      table,tr,td{
+		  padding: 20px;
+		  border: 1px solid #ccc;
+	  }
+	</style>
+</head>
+<body>
+<h1>Add thêm nội dung vào html </h1>
+<div class="container" style="margin: 20px; padding: 20px; background-color: orange; border: 3px solid red">
+	Nội dung bên trong thẻ container
+</div>
+<div style="max-width: 20px; padding: 20px;">
+	<table style="padding: 10px">
+		<thead>
+			<td>Tên phương thức</td>
+			<td>Ý nghĩa</td>
+			<td>Kích cỡ (px)</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Width()</td>
+				<td>dộ rộng bên trong content</td>
+				<td id="w"></td>
+			</tr>
+			<tr>
+				<td>Height()</td>
+				<td>dộ cao bên trong content</td>
+				<td id="h"></td>
+			</tr>
+			<tr>
+				<td>innerWidth()</td>
+				<td>dộ rộng bên trong content + padding</td>
+				<td id="iw"></td>
+			</tr>
+			<tr>
+				<td>innerHeight()</td>
+				<td>dộ cao bên trong content + padding</td>
+				<td id="ih"></td>
+			</tr>
+			<tr>
+				<td>outerWidth()</td>
+				<td>dộ rộng bên trong content + padding + border</td>
+				<td id="ow"></td>
+			</tr>
+			<tr>
+				<td>outHeight()</td>
+				<td>dộ cao bên trong content + padding + border</td>
+				<td id="oh"></td>
+			</tr>
+			<tr>
+				<td>outerWidth(true)</td>
+				<td>dộ rộng bên trong content + padding + border + margin</td>
+				<td id="owt"></td>
+			</tr>
+			<tr>
+				<td>outerHeight(true)</td>
+				<td>dộ cao bên trong content + padding + border + margin</td>
+				<td id="oht"></td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+<div style="margin-top: 30px; padding: 10px;">
+	<button type="button" id="control">Lấy kích cỡ</button>
+
+</div>
+
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+   $("#control").on("click",function () {
+     var w= $(".container").width();
+     $("#w").html(w);
+     var h= $(".container").height();
+     $("#h").html(h);
+     var iw= $(".container").innerWidth();
+     $("#iw").html(iw);
+     var ih= $(".container").innerHeight();
+     $("#ih").html(ih);
+       var ow= $(".container").outerWidth();
+       $("#ow").html(ow);
+       var oh= $(".container").outerHeight();
+       $("#oh").html(oh);
+       var owt= $(".container").innerWidth(true);
+       $("#owt").html(owt);
+       var owh= $(".container").innerHeight(true);
+       $("#owh").html(owh);
+   })
+  })
+ 
+</script>
+</body>
+</html>

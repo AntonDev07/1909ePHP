@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<h1>Atr method được </h1>
+<a href="https://www.google.com/" id="souce">Google</a>
+<div style="margin: 20px; padding: 20px;">
+	<button id="control" type="button">Copy Artribute</button>
+</div>
+<div style="margin: 20px; padding: 20px;">
+	<a href="#" id="target">Google copy</a>
+</div>
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#control").on("click", function () {
+        // lấy ra giá trị của thuộc tính href của thẻ a
+		var href = $("a#souce").attr("href");
+		// set giá trị vào thuộc tính href thẻ a copy
+		$("a#target").attr("href", href);
+		
+    })
+  })
+ 
+</script>
+</body>
+</html>

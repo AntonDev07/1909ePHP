@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<p id="target">Tên thẻ</p>
+<div>
+	<button id="control-show">Hiện thẻ</button>
+	<button id="control-hide">Ẩn thẻ</button>
+</div>
+
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#control-show').dblclick(function () {
+			$('#target').show();
+        });
+        $('#control-hide').dblclick(function () {
+            $('#target').hide();
+        });
+    })
+</script>
+</body>
+</html>

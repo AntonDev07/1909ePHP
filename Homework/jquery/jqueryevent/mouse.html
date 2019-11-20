@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+		.container{
+			background: orange;
+			padding: 20px;
+			color: green;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+ <h1>mouseenter và mouseleave (di chuyển ra ngoài và đi vào đối tượng )</h1>
+ <div class="container">
+	 The $(document).ready() method allows us to execute a function when the document
+	 is fully loaded. This event is already explained in the jQuery Syntax chapter.
+ </div>
+ <div class="container">
+	 The $(document).ready() method allows us to execute a function when the document
+	 is fully loaded. This event is already explained in the jQuery Syntax chapter.
+ </div>
+ <div class="container">
+	 The $(document).ready() method allows us to execute a function when the document
+	 is fully loaded. This event is already explained in the jQuery Syntax chapter.
+ </div>
+
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.container').mouseenter(function () {
+           $(this).css('background','red');
+        });
+		$('.container').mouseleave(function () {
+			$(this).css('background','orange');
+        });
+    })
+</script>
+</body>
+</html>

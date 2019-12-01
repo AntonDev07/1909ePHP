@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tính toán BMI</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+
+            <pre>
+                Sử dụng công thức tại trang https://news.zing.vn/5-cong-thuc-don-gian-do-chi-so-bmi-post669580.html
+                để tính toán ra chỉ số BMI khi nhập vào
+                và in ra thông tin phân loại
+                và nguy cơ bệnh tật
+            </pre>
+		<form name="bmi" action="post.php" method="post" role="form">
+			<div class="form-group">
+				<label>Cân nặng ( Kg )</label>
+				<input type="text" name="weight" class="form-control" placeholder="Cân nặng">
+
+			</div>
+			<div class="form-group">
+				<label>Chiều cao ( đơn vị mét )</label>
+				<input type="text" name="height" class="form-control" placeholder="Chiều cao">
+			</div>
+
+			<button class="btn btn-primary" name="btnTinh">tính MBI</button>
+		</form>
+	</div>
+
+
+</div>
+
+
+</body>
+</html>

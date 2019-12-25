@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<pre>
+        Lệnh mysql để tạo 1 bảng table trong CSDL
+        CREATE TABLE tên bảng (
+            tên_cột_1 kiểu_dữ liệu  UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            tên_cột_2 kiểu_dữ liệu NOT NULL,
+            tên_cột_3 kiểu_dữ liệu NOT NULL,
+            tên_cột_4 kiểu_dữ liệu,
+            )
+
+        Trong đó
+        UNSIGNED ( không âm )
+        AUTO_INCREMENT ( tự động tăng )
+        PRIMARY KEY ( khóa chính của bảng )
+        NOT NULL ( cột dữ liệu đó không null )
+        DEFAULT ( tạo dữ liệu mặc định cho cột)
+        CURRENT_TIMESTAMP ( lấy thời gian hiện tại trong mysql)
+        ON UPDATE ( lệnh thực thi có sự cập nhật bản ghi trong CSDL )
+        Ví dụ :
+        CREATE TABLE MyGuests (
+            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            firstname VARCHAR(30) NOT NULL,
+            lastname VARCHAR(30) NOT NULL,
+            email VARCHAR(50),
+            reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+            )
+    </pre>
+</body>
+</html>

@@ -9,13 +9,13 @@
 class Student {
 
     public function demo1(){
-        echo "Demo 1";
+        echo "AppMVC 1";
     }
 
 }
 //class Student {
 //    public function demo2(){
-//        echo "Demo 2";
+//        echo "AppMVC 2";
 //    }
 //}
 

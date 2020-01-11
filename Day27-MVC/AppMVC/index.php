@@ -8,6 +8,8 @@ include_once "mvc/models/Database.php";
 
 include_once "mvc/controllers/PostController.php";
 include_once "mvc/controllers/ProductController.php";
+include_once "mvc/controllers/IndexController.php";
+include_once "mvc/controllers/ErrorController.php";
 
 include_once "mvc/models/PostModel.php";
 include_once "mvc/models/ProductModel.php";

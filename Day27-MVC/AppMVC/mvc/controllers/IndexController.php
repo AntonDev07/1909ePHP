@@ -8,10 +8,15 @@
 
 namespace MVC\Controllers;
 
+
+use MVC\Models\PostModel;
+
 class IndexController {
 
     public function indexAction() {
         echo "<br>" . __METHOD__;
+        $model = new  PostModel();
+
 
         include_once "mvc/views/index/index.php";
     }

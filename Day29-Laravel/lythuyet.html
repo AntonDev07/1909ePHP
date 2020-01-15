@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Laravel</title>
+</head>
+<body>
+ <pre>
+	 1 - tạo ra 1 controller "AbcController" trực tiếp trong folder theo đường dẫn
+        app/Http/Controllers
+        => php artisan make:controller AbcController
+	 2 - tạo ra 1 controller "PostController" nằm 1 folder mẹ
+        Backend bên trong đường dẫn app/Http/Controllers
+        => php artisan make:controller Backend/PostController
+
+	 3 tạo 1 controller "PostController" trong folder
+        Frontend trong app/Http/Controllers
+        => php artisan make:controller Frontend/PostController
+
+
+	 4 tạo model trực tiếp trong folder app
+        => php artisan make:model AbcModel
+
+	 5 tạo model trong folder của folder app
+        => php artisan make:model Models/Backend/PostModel
+        => php artisan make:model Models/Frontend/PostModel
+	 6 tạo view: chúng ta phải tạo thủ công
+	 vào resources/views/ tên file php
+	 lưu ý: tên file phải có đuôi .blade
+	 vd: resources/views/hello.blade.php
+
+
+	 7 migration
+	 => php artisan make:migration create_customers_table
+
+          public function up()
+            {
+                Schema::create('customers', function (Blueprint $table) {
+                    $table->bigIncrements('id');
+                    $table->string('firstname');
+                    $table->string('lastname');
+                    $table->integer("age");
+                    $table->text("address");
+                    $table->dateTime("birthday");
+                    $table->timestamps();
+                });
+            }
+	 8. đưa migration thành bảng thật trong db
+	 => php artisan migrate
+
+	 9. Seeding
+	 tạo seader:
+	 => php artisan make:seeder UsersTableSeeder
+
+        use Illuminate\Database\Seeder;
+
+        class DatabaseSeeder extends Seeder
+        {
+            /**
+             * Seed the application's database.
+             *
+             * @return void
+             */
+            public function run()
+            {
+                // $this->call(UsersTableSeeder::class);
+
+                $this->call(CustomersTableSeeder::class);
+            }
+        }
+
+        =>
+
+        use Illuminate\Database\Seeder;
+        use Illuminate\Support\Facades\DB;
+        use Illuminate\Support\Facades\Hash;
+        use Illuminate\Support\Str;
+
+        class CustomersTableSeeder extends Seeder
+        {
+            /**
+             * Run the database seeds.
+             *
+             * @return void
+             */
+            public function run()
+            {
+                //
+                for ($i = 1; $i <= 20; $i++) {
+                    DB::table('customers')->insert([
+                        'firstname' => Str::random(10),
+                        'lastname' => Str::random(10),
+                        'age' => rand(1,100),
+                        'address' => Str::random(10) . " " . Str::random(10),
+                        'birthday' => date("Y-m-d H:i:s"),
+                    ]);
+                }
+
+            }
+        }
+
+        =>
+        Bước 1 : composer dump-autoload
+        Bước 2 : php artisan db:seed
+ </pre>
+
+</body>
+</html>

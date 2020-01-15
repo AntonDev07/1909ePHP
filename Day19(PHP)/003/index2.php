@@ -5,6 +5,11 @@
  * Date: 12/5/2019
  * Time: 8:29 PM
  */
+
+/*Phương thuc tĩnh là phương thức có thể gọi đến chính nó mà không cần khởi
+tạo đối tượng, gọi cả phương thức bằng dấu ::.
+Chú ý: trong phức tĩnh gọi đến phương thức tĩnh ko dùng từ this mà dùng self::
+*/
 class Demo {
     public static $pro1;
     public $pro2;

@@ -1,0 +1,9 @@
+khi lấy dự án laravel từ trên github về
+thì phải cd vào trong thư mục gốc của cái dự án đấy (ex: bookstore)
+1 - composer install
+cài đặt các thư viện của bên thứ 3
+2 - copy .env từ 1 dự án khác sang
+và sửa lại nội dung
+sửa lại tên CSDL , ip CSDL ...
+3 - php artisan key:generate
+sinh app key bảo mật mới

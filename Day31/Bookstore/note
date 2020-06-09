@@ -1,0 +1,43 @@
+1 - tạo folder tên là bookstore sau đó cài bản laravel mới vào trong
+folder này
+composer global require laravel/installer
+laravel new
+2 - tạo db : bookstore
+3 - tạo ra 1 số controller cơ bản
+3.1 :
+php artisan make:controller Backend/BooksController
+php artisan make:controller Frontend/BooksController
+4 - tạo model
+php artisan make:model Models/Backend/BooksModel
+php artisan make:model Models/Frontend/BooksModel
+4.sub
+tạo folder /bookstore_laravel tạo các file layouts, partials, subviews
+
+5 - tạo các migration cơ sở dữ liệu
+php artisan make:migration create_books_table
+vào trong đường dẫn
+bookstore/database/migrations/create_books_table.php
+sau đó thêm các trường vào trong bảng
+để xem cấu trúc bảng
+6 - tạo bảng thật
+php artisan migrate
+7 - dựng giao diện template html boostrap
+8 - tạo router cho ứng dụng
+9 - tạo code trong controller để trả về view tương ứng
+10 - sửa model để lấy dữ liệu
+11 - kéo model vào trong controller
+12 - trả dữ liệu từ controller xuống view
+13 - in dữ liệu xuống view
+14 - test thử ứng dụng
+
+*** câu lệnh hiển thị tất cả router trong ứng dụng
+php artisan route:list
+
+
+=========================================== ORDER TASK ===============================================
+1.1 Đã xong database
+1.2 Đã xong Controller, model, view (Order)
+
+
+1.3 Test thêm sửa xóa order (cần làm)
+1.4 Còn lại (Order_book)
